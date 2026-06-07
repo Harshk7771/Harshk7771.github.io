@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'nonce-AahUq54NW00f4gWBtHlEkg'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; object-src 'none'; upgrade-insecure-requests;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Harsh Kumar | Cybersecurity Portfolio | SOC & DFIR Analyst</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="author" href="/.well-known/security.txt">
+<meta name="description" content="Harsh Kumar — SOC Analyst, DFIR Analyst, Endpoint Security Engineer. Delhi, India.">
+<meta property="og:title" content="Harsh Kumar — SOC & DFIR Analyst">
+<meta property="og:description" content="Cybersecurity professional specialising in SOC, DFIR, and Endpoint Security. NCIIPC vulnerability researcher.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#080808">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="follower"></div>
+
+<nav>
+  <a href="#" class="nav-logo">HK // 2026</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  
+  <button id="hamburger" onclick="toggleMenu()" aria-label="Menu" style="display:none;background:none;border:1px solid #222;padding:.5rem .7rem;cursor:pointer;position:relative;z-index:1;flex-direction:column;gap:5px;align-items:center;justify-content:center;">
+    <span id="hb1" style="display:block;width:20px;height:1px;background:#888;transition:all .3s;"></span>
+    <span id="hb2" style="display:block;width:20px;height:1px;background:#888;transition:all .3s;"></span>
+    <span id="hb3" style="display:block;width:14px;height:1px;background:#888;transition:all .3s;align-self:flex-end;"></span>
+  </button>
+  <a href="#" data-mailto="hy9445531" data-domain="gmail.com" class="mailto-link" class="nav-email" id="nav-email-mob">Email Me</a>
+</nav>
+
+<!-- Mobile drawer -->
+<div id="mobile-nav" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(8,8,8,.97);z-index:99;flex-direction:column;justify-content:center;align-items:center;gap:2.5rem;">
+  <a href="#about" onclick="toggleMenu()" style="font-family:'Bebas Neue','Arial Black','Arial Narrow',Impact,sans-serif;font-size:3rem;color:#fff;text-decoration:none;letter-spacing:.05em;">About</a>
+  <a href="#skills" onclick="toggleMenu()" style="font-family:'Bebas Neue','Arial Black','Arial Narrow',Impact,sans-serif;font-size:3rem;color:#fff;text-decoration:none;letter-spacing:.05em;">Skills</a>
+  <a href="#experience" onclick="toggleMenu()" style="font-family:'Bebas Neue','Arial Black','Arial Narrow',Impact,sans-serif;font-size:3rem;color:#fff;text-decoration:none;letter-spacing:.05em;">Experience</a>
+  <a href="#projects" onclick="toggleMenu()" style="font-family:'Bebas Neue','Arial Black','Arial Narrow',Impact,sans-serif;font-size:3rem;color:#fff;text-decoration:none;letter-spacing:.05em;">Projects</a>
+  <a href="#contact" onclick="toggleMenu()" style="font-family:'Bebas Neue','Arial Black','Arial Narrow',Impact,sans-serif;font-size:3rem;color:#fff;text-decoration:none;letter-spacing:.05em;">Contact</a>
+  <a href="#" data-mailto="hy9445531" data-domain="gmail.com" class="mailto-link" style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.75rem;color:#c8f135;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(200,241,53,.3);padding:.8rem 2rem;text-decoration:none;margin-top:1rem;">hy9445531&#64;gmail&#46;com</a>
+</div>
+
+<section class="hero" id="hero" style="border-top:none;padding-top:0;">
+  <div class="hero-year">Portfolio · 2026 · Delhi, India</div>
+  <div class="hero-name">HARSH<br><span class="outline">KUMAR</span></div>
+  <div class="hero-bottom">
+    <div class="hero-roles"><span>SOC Analyst</span> · <span>DFIR Analyst</span> · <span>Endpoint Security</span></div>
+    <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
+  </div>
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span class="ticker-item"><b>◆</b>MITRE ATT&CK</span>
+      <span class="ticker-item"><b>◆</b>Checkpoint EDR</span>
+      <span class="ticker-item"><b>◆</b>Autopsy · FTK Imager</span>
+      <span class="ticker-item"><b>◆</b>Incident Response</span>
+      <span class="ticker-item"><b>◆</b>Wireshark · Snort</span>
+      <span class="ticker-item"><b>◆</b>Cyber Kill Chain</span>
+      <span class="ticker-item"><b>◆</b>DFIR Analysis</span>
+      <span class="ticker-item"><b>◆</b>NCIIPC · 4 CVDs</span>
+      <span class="ticker-item"><b>◆</b>Python · Bash</span>
+      <span class="ticker-item"><b>◆</b>Diamond Model</span>
+      <span class="ticker-item"><b>◆</b>MITRE D3FEND</span>
+      <span class="ticker-item"><b>◆</b>Kali Linux</span>
+      <span class="ticker-item"><b>◆</b>MITRE ATT&CK</span>
+      <span class="ticker-item"><b>◆</b>Checkpoint EDR</span>
+      <span class="ticker-item"><b>◆</b>Autopsy · FTK Imager</span>
+      <span class="ticker-item"><b>◆</b>Incident Response</span>
+      <span class="ticker-item"><b>◆</b>Wireshark · Snort</span>
+      <span class="ticker-item"><b>◆</b>Cyber Kill Chain</span>
+      <span class="ticker-item"><b>◆</b>DFIR Analysis</span>
+      <span class="ticker-item"><b>◆</b>NCIIPC · 4 CVDs</span>
+      <span class="ticker-item"><b>◆</b>Python · Bash</span>
+      <span class="ticker-item"><b>◆</b>Diamond Model</span>
+      <span class="ticker-item"><b>◆</b>MITRE D3FEND</span>
+      <span class="ticker-item"><b>◆</b>Kali Linux</span>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-header reveal">
+    <div class="section-num">01</div>
+    <div><div class="section-label">About Me</div><div class="section-title">Who I Am</div></div>
+  </div>
+  <div class="about-grid reveal">
+    <div class="about-stats">
+      <div class="stat-item"><div class="stat-num">04</div><div class="stat-label">Vulnerabilities Disclosed to NCIIPC</div></div>
+      <div class="stat-item"><div class="stat-num">10+</div><div class="stat-label">Certifications (2024–25)</div></div>
+      <div class="stat-item"><div class="stat-num">03</div><div class="stat-label">Cybersecurity Roles & Internships</div></div>
+      <div class="stat-item"><div class="stat-num">02</div><div class="stat-label">Security Tools Built & Deployed</div></div>
+    </div>
+    <div class="about-text">
+      <p>Cybersecurity professional with hands-on experience in <strong>Endpoint Detection & Response (EDR)</strong>, Checkpoint firewall administration, incident response, and digital forensics. Proficient in Autopsy, FTK Imager, and Wireshark.</p>
+      <p>Skilled across <strong>MITRE ATT&CK</strong>, Cyber Kill Chain, Diamond Model, Pyramid of Pain, and MITRE D3FEND. Pursuing MCA in Cybersecurity and building an open-source autonomous SOC platform — <strong>Project Chakravyuh</strong>.</p>
+      <p>Former <strong>Company Sergeant Major</strong> in NCC Junior Division — leadership, command, and operational discipline that carries directly into security operations.</p>
+      <div class="nciipc-badge">NCIIPC — 4 Responsible Disclosures · 2024</div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-header reveal">
+    <div class="section-num">02</div>
+    <div><div class="section-label">Core Competencies</div><div class="section-title">Skills & Tools</div></div>
+  </div>
+  <div class="skills-container reveal">
+    <div class="skill-row"><div class="skill-category">EDR / Endpoint</div><div class="skill-tags"><span class="skill-tag">Checkpoint Security</span><span class="skill-tag">Centralized AV</span><span class="skill-tag">IPS / IDS</span><span class="skill-tag">Anti-Malware</span><span class="skill-tag">Log Inspection</span><span class="skill-tag">Integrity Monitoring</span><span class="skill-tag">Next-Gen AV</span></div></div>
+    <div class="skill-row"><div class="skill-category">DFIR Tools</div><div class="skill-tags"><span class="skill-tag">Autopsy</span><span class="skill-tag">FTK Imager</span><span class="skill-tag">Mobiledit Forensics</span><span class="skill-tag">BelkaGPT</span><span class="skill-tag">Wireshark</span><span class="skill-tag">Network Miner</span><span class="skill-tag">Snort</span></div></div>
+    <div class="skill-row"><div class="skill-category">Frameworks</div><div class="skill-tags"><span class="skill-tag">MITRE ATT&CK</span><span class="skill-tag">Cyber Kill Chain</span><span class="skill-tag">Diamond Model</span><span class="skill-tag">Pyramid of Pain</span><span class="skill-tag">MITRE D3FEND</span></div></div>
+    <div class="skill-row"><div class="skill-category">SOC / Monitoring</div><div class="skill-tags"><span class="skill-tag">Alert Triage</span><span class="skill-tag">EDR/XDR Review</span><span class="skill-tag">SIEM Analysis</span><span class="skill-tag">Incident Ticketing</span><span class="skill-tag">Log Analysis</span><span class="skill-tag">IOC Investigation</span></div></div>
+    <div class="skill-row"><div class="skill-category">OS & Network</div><div class="skill-tags"><span class="skill-tag">Kali Linux</span><span class="skill-tag">Windows Server</span><span class="skill-tag">TCP/IP</span><span class="skill-tag">Firewall Policy</span><span class="skill-tag">VPN</span><span class="skill-tag">NAT</span></div></div>
+    <div class="skill-row"><div class="skill-category">Scripting</div><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">Bash</span><span class="skill-tag">BeautifulSoup</span><span class="skill-tag">Requests</span><span class="skill-tag">Automation Scripts</span></div></div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-header reveal">
+    <div class="section-num">03</div>
+    <div><div class="section-label">Work History</div><div class="section-title">Experience</div></div>
+  </div>
+  <div class="exp-list">
+    <div class="exp-item reveal">
+      <div><div class="exp-period">Aug 2024 — Feb 2025</div><div class="exp-org-tag">Full Time</div></div>
+      <div>
+        <div class="exp-role">Antivirus Engineer L1</div>
+        <div class="exp-company">Thoughtsol Infotech Pvt Ltd · BHEL, Noida Sec-16A</div>
+        <ul class="exp-bullets">
+          <li>Managed enterprise EDR architecture & AV policy deployment across BHEL's multi-site infrastructure</li>
+          <li>Administered Checkpoint Security Gateway; configured IPS, anti-malware & log inspection policies</li>
+          <li>Handled security incident triage, ITSM ticketing & end-to-end resolution workflows</li>
+          <li>Built Python/Bash automation scripts to proactively identify & mitigate endpoint vulnerabilities</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item reveal">
+      <div><div class="exp-period">Jun 2024 — Aug 2024</div><div class="exp-org-tag">Internship</div></div>
+      <div>
+        <div class="exp-role">DFIR Intern</div>
+        <div class="exp-company">IIMT Group of Colleges & FCRF · Remote</div>
+        <ul class="exp-bullets">
+          <li>Conducted forensic investigations using Autopsy & FTK Imager on simulated incident scenarios</li>
+          <li>Applied full IR lifecycle — Identification, Containment, Eradication, Recovery</li>
+          <li>Analysed network traffic with Wireshark to reconstruct attack timelines & identify IOCs</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item reveal">
+      <div><div class="exp-period">Jan 2024 — Jun 2024</div><div class="exp-org-tag">Internship</div></div>
+      <div>
+        <div class="exp-role">Security Analyst Intern</div>
+        <div class="exp-company">Cryptus Cyber Security Pvt Ltd · Shakarpur, Delhi</div>
+        <ul class="exp-bullets">
+          <li>Conducted web application VAPT & vulnerability assessments for client engagements</li>
+          <li>Delivered CVSS-scored reports with actionable remediation strategies</li>
+          <li>Monitored threat intelligence feeds & collaborated on security implementations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-header reveal">
+    <div class="section-num">04</div>
+    <div><div class="section-label">What I'm Building</div><div class="section-title">Projects</div></div>
+  </div>
+  <div class="projects-list">
+    <div class="project-item reveal">
+      <div class="project-num">01</div>
+      <div class="project-body">
+        <div class="project-status-badge badge-dev">In Development</div>
+        <div class="project-name">Chakravyuh</div>
+        <div class="project-subtitle">Next-Gen Autonomous Open-Source SOC Architecture</div>
+        <p class="project-desc">A modular autonomous SOC platform for self-directed threat detection, alert triage, and incident response. Pluggable components: log ingestion → correlation → threat intel → MITRE ATT&CK-aligned playbooks. Built for India 🇮🇳</p>
+        <div class="project-tech"><span class="tech-pill">SOC</span><span class="tech-pill">SOAR</span><span class="tech-pill">MITRE ATT&CK</span><span class="tech-pill">Threat Intel</span><span class="tech-pill">Log Ingestion</span><span class="tech-pill">Automation</span></div>
+      </div>
+      <div class="project-actions">
+        <a href="https://github.com/Harshk7771/Project-Chakravyuh" target="_blank" class="btn-project btn-gh" rel="noopener noreferrer">View GitHub</a>
+        <a href="https://chakravyuhcyberops.notion.site/Harsh-Kumar-SOC-DFIR-Analyst-bebfd9803a324eb3b19aaac7767aab47" target="_blank" class="btn-project btn-live" rel="noopener noreferrer">View Live</a>
+      </div>
+    </div>
+    <div class="project-item reveal">
+      <div class="project-num">02</div>
+      <div class="project-body">
+        <div class="project-status-badge badge-live">Live</div>
+        <div class="project-name">HOGUN</div>
+        <div class="project-subtitle">Python-Based Web Scraping & OSINT Tool</div>
+        <p class="project-desc">Python tool for OSINT gathering, target reconnaissance, footprinting, and forensic data collection from publicly available web sources. Subdomain enumeration, WHOIS lookup, metadata extraction.</p>
+        <div class="project-tech"><span class="tech-pill">Python</span><span class="tech-pill">BeautifulSoup</span><span class="tech-pill">Requests</span><span class="tech-pill">OSINT</span><span class="tech-pill">Reconnaissance</span><span class="tech-pill">DFIR</span></div>
+      </div>
+      <div class="project-actions">
+        <a href="https://github.com/Harshk7771/HOGUN" target="_blank" class="btn-project btn-gh" rel="noopener noreferrer">View GitHub</a>
+        <a href="https://github.com/Harshk7771/HOGUN" target="_blank" class="btn-project btn-live" rel="noopener noreferrer">View Live →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Earlier Projects -->
+  <div style="margin-top:4rem;">
+    <div style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.65rem;color:#333;letter-spacing:.2em;text-transform:uppercase;border-left:2px solid #1e1e1e;padding-left:1rem;margin-bottom:2rem;">Earlier Work · Learning & Development Projects</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:#141414;">
+
+      <div style="background:#080808;padding:2rem;transition:background .2s;" class="hover-card">
+        <div style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#333;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem;">C++ · 2023</div>
+        <div style="font-family:'Bebas Neue','Arial Black','Arial Narrow',Impact,sans-serif;font-size:1.6rem;color:#aaa;letter-spacing:.03em;margin-bottom:.4rem;">Quiz Game</div>
+        <p style="font-size:.82rem;color:#555;line-height:1.6;margin-bottom:1rem;">Console-based quiz application built in C++. Demonstrates understanding of data structures, conditionals, and program flow — foundational programming skills.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem;"><span style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#333;border:1px solid #1e1e1e;padding:.2rem .5rem;">C++</span><span style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#333;border:1px solid #1e1e1e;padding:.2rem .5rem;">OOP</span><span style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#333;border:1px solid #1e1e1e;padding:.2rem .5rem;">CLI</span></div>
+        <a href="https://github.com/Harshk7771/Quiz-Game" target="_blank" style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.62rem;color:#444;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid #1e1e1e;padding:.5rem 1rem;display:inline-block;transition:all .2s;" rel="noopener noreferrer">View GitHub</a>
+      </div>
+
+      <div style="background:#080808;padding:2rem;transition:background .2s;" class="hover-card">
+        <div style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#333;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem;">HTML · CSS · JS · 2023</div>
+        <div style="font-family:'Bebas Neue','Arial Black','Arial Narrow',Impact,sans-serif;font-size:1.6rem;color:#aaa;letter-spacing:.03em;margin-bottom:.4rem;">Travel Website</div>
+        <p style="font-size:.82rem;color:#555;line-height:1.6;margin-bottom:1rem;">Mid-level travel website built with HTML, CSS, Bootstrap, JavaScript and PHP. Demonstrates full front-to-back web development fundamentals.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem;"><span style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#333;border:1px solid #1e1e1e;padding:.2rem .5rem;">HTML</span><span style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#333;border:1px solid #1e1e1e;padding:.2rem .5rem;">Bootstrap</span><span style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#333;border:1px solid #1e1e1e;padding:.2rem .5rem;">PHP</span><span style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#333;border:1px solid #1e1e1e;padding:.2rem .5rem;">JavaScript</span></div>
+        <a href="https://github.com/Harshk7771/Travel-Website" target="_blank" style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.62rem;color:#444;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid #1e1e1e;padding:.5rem 1rem;display:inline-block;transition:all .2s;" rel="noopener noreferrer">View GitHub</a>
+      </div>
+
+      <div style="background:#080808;padding:2rem;transition:background .2s;" class="hover-card">
+        <div style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#333;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem;">Python · Major Project</div>
+        <div style="font-family:'Bebas Neue','Arial Black','Arial Narrow',Impact,sans-serif;font-size:1.6rem;color:#aaa;letter-spacing:.03em;margin-bottom:.4rem;">Language Translator</div>
+        <p style="font-size:.82rem;color:#555;line-height:1.6;margin-bottom:1rem;">Python-based language translation tool. Demonstrates API integration, scripting logic, and practical Python application development.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem;"><span style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#333;border:1px solid #1e1e1e;padding:.2rem .5rem;">Python</span><span style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#333;border:1px solid #1e1e1e;padding:.2rem .5rem;">API</span><span style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#333;border:1px solid #1e1e1e;padding:.2rem .5rem;">NLP</span></div>
+        <a href="https://github.com/Harshk7771/Major-Project" target="_blank" style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.62rem;color:#444;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid #1e1e1e;padding:.5rem 1rem;display:inline-block;transition:all .2s;" rel="noopener noreferrer">View GitHub</a>
+      </div>
+
+      <div style="background:#080808;padding:2rem;transition:background .2s;" class="hover-card">
+        <div style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#333;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem;">Python · Minor Project</div>
+        <div style="font-family:'Bebas Neue','Arial Black','Arial Narrow',Impact,sans-serif;font-size:1.6rem;color:#aaa;letter-spacing:.03em;margin-bottom:.4rem;">Banking Chatbot</div>
+        <p style="font-size:.82rem;color:#555;line-height:1.6;margin-bottom:1rem;">Internet banking chatbot built in Python demonstrating NLP-based conversational logic deployed on both mobile and web banking interfaces.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem;"><span style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#333;border:1px solid #1e1e1e;padding:.2rem .5rem;">Python</span><span style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#333;border:1px solid #1e1e1e;padding:.2rem .5rem;">Chatbot</span><span style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#333;border:1px solid #1e1e1e;padding:.2rem .5rem;">NLP</span></div>
+        <a href="https://github.com/Harshk7771/Minor-Project" target="_blank" style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.62rem;color:#444;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid #1e1e1e;padding:.5rem 1rem;display:inline-block;transition:all .2s;" rel="noopener noreferrer">View GitHub</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="section-header reveal">
+    <div class="section-num">05</div>
+    <div><div class="section-label">Recognition</div><div class="section-title">Achievements</div></div>
+  </div>
+  <div class="ach-grid reveal">
+    <div class="ach-card"><div class="ach-icon">🇮🇳</div><div class="ach-title">NCIIPC Vulnerability Disclosure</div><div class="ach-desc">Responsibly disclosed 4 major vulnerabilities to India's National Critical Information Infrastructure Protection Centre. Officially acknowledged for ethical security research.</div><div class="ach-year">2024</div></div>
+    <div class="ach-card"><div class="ach-icon">🥉</div><div class="ach-title">3rd — All-Delhi NCC Competition</div><div class="ach-desc">Placed 3rd at inter-school NCC competition organised by Dr. Bhim Rao Ambedkar College, University of Delhi. Competed against cadets from schools across Delhi.</div><div class="ach-year">2018</div></div>
+    <div class="ach-card"><div class="ach-icon">⭐</div><div class="ach-title">Company Sergeant Major (CSM)</div><div class="ach-desc">Appointed CSM — NCC Junior Division — after completing tenure as Sergeant. Commanded company-level cadet unit, overseeing drill, discipline, and operations.</div><div class="ach-year">2017 – 2018</div></div>
+    <div class="ach-card"><div class="ach-icon">🎖️</div><div class="ach-title">Best Cadet × 3 Titles</div><div class="ach-desc">Awarded Best Cadet at school annual day and intra-school NCC competitions across three separate years. NCC A Certificate, Junior Division.</div><div class="ach-year">2015 · 2016 · 2018</div></div>
+  </div>
+</section>
+
+<section id="certs">
+  <div class="section-header reveal">
+    <div class="section-num">06</div>
+    <div><div class="section-label">Verified</div><div class="section-title">Certifications</div></div>
+  </div>
+
+  <!-- TIER 1: 4 Hero Certs -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;background:#1e1e1e;margin-bottom:1px;" class="reveal">
+    <div style="background:#080808;padding:2.2rem;border-top:2px solid #c8f135;transition:background .2s;" class="hover-card-feat">
+      <div style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.58rem;color:#c8f135;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem;">⭐ Featured · Govt of India</div>
+      <div style="font-size:1rem;font-weight:500;color:#fff;margin-bottom:.4rem;line-height:1.3;">Windows Forensic Analysis Bootcamp</div>
+      <div style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.62rem;color:#555;margin-bottom:.5rem;">STDC — CDAC</div>
+      <div style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#c8f135;">2025</div>
+    </div>
+    <div style="background:#080808;padding:2.2rem;border-top:2px solid #c8f135;transition:background .2s;" class="hover-card-feat">
+      <div style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.58rem;color:#c8f135;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem;">⭐ Featured · Investigator Credential</div>
+      <div style="font-size:1rem;font-weight:500;color:#fff;margin-bottom:.4rem;line-height:1.3;">CSI Linux Certified Investigator</div>
+      <div style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.62rem;color:#555;margin-bottom:.5rem;">CSI Linux</div>
+      <div style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#c8f135;">2024</div>
+    </div>
+    <div style="background:#080808;padding:2.2rem;border-top:2px solid #c8f135;transition:background .2s;" class="hover-card-feat">
+      <div style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.58rem;color:#c8f135;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem;">⭐ Featured · AI + DFIR · 2025</div>
+      <div style="font-size:1rem;font-weight:500;color:#fff;margin-bottom:.4rem;line-height:1.3;">BelkaGPT: Effective AI in DFIR</div>
+      <div style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.62rem;color:#555;margin-bottom:.5rem;">Belkasoft</div>
+      <div style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#c8f135;">2025</div>
+    </div>
+    <div style="background:#080808;padding:2.2rem;border-top:2px solid #c8f135;transition:background .2s;" class="hover-card-feat">
+      <div style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.58rem;color:#c8f135;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.8rem;">⭐ Featured · Cisco Brand</div>
+      <div style="font-size:1rem;font-weight:500;color:#fff;margin-bottom:.4rem;line-height:1.3;">Junior Cyber Security Analyst</div>
+      <div style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.62rem;color:#555;margin-bottom:.5rem;">CISCO</div>
+      <div style="font-family:'JetBrains Mono','Courier New',Courier,monospace;font-size:.6rem;color:#c8f135;">2024</div>
+    </div>
+  </div>
+
+  <!-- TIER 2: Remaining 6 — collapsible -->
+  <div class="reveal" style="margin-top:1px;">
+    <button onclick="toggleCerts()" id="cert-toggle-btn" class="cert-toggle-hover">
+      <span>View all certifications (+ 6 more)</span>
+      <span id="cert-arrow" style="transition:transform .3s;">↓</span>
+    </button>
+    <div id="cert-extra" style="display:none;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;background:#141414;margin-top:1px;">
+      <div class="cert-card"><div class="cert-name">Advanced Digital Forensics Techniques</div><div class="cert-meta">Belkasoft</div><div class="cert-year">2024</div></div>
+      <div class="cert-card"><div class="cert-name">Cyber Threat Intelligence 101</div><div class="cert-meta">arcx</div><div class="cert-year">2024</div></div>
+      <div class="cert-card"><div class="cert-name">Digital Forensics Essentials</div><div class="cert-meta">EC-Council</div><div class="cert-year">2024</div></div>
+      <div class="cert-card"><div class="cert-name">Ethical Hacking Essentials</div><div class="cert-meta">EC-Council</div><div class="cert-year">2024</div></div>
+      <div class="cert-card"><div class="cert-name">Network Defense Essentials</div><div class="cert-meta">EC-Council</div><div class="cert-year">2024</div></div>
+      <div class="cert-card"><div class="cert-name">SysTools Email Forensic Essentials</div><div class="cert-meta">SysTools</div><div class="cert-year">2024</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="other">
+  <div class="section-header reveal">
+    <div class="section-num">07</div>
+    <div><div class="section-label">Prior Work</div><div class="section-title">Other Experience</div></div>
+  </div>
+  <div class="other-notice reveal">Non-cybersecurity roles · Included for transparency · Demonstrate professional track record in quality analysis & client communication prior to career transition</div>
+  <div class="other-grid reveal">
+    <div class="other-card"><div class="other-role">Quality Analyst</div><div class="other-co">IEnergizer IT Services · Noida Sec-60</div><div class="other-period">Mar 2026 – Present</div><ul class="other-pts"><li>Live & recorded audits of customer interactions</li><li>Structured feedback to agents based on conversation analysis</li><li>Weekly client calibration sessions</li></ul></div>
+    <div class="other-card"><div class="other-role">Quality Consultant</div><div class="other-co">Mattsenkumar Services Pvt Ltd · Gurugram</div><div class="other-period">Apr 2022 – May 2023</div><ul class="other-pts"><li>Evaluated sales & non-sales web chat interactions</li><li>Structured feedback reports to agents</li><li>Weekly client calibration calls</li></ul></div>
+    <div class="other-card"><div class="other-role">Customer Support Representative</div><div class="other-co">Caretel Infotech Ltd · Noida, UP</div><div class="other-period">Oct 2019 – Sep 2020</div><ul class="other-pts"><li>Call-based assistance for government document queries</li><li>Certificate issuance appointment booking</li></ul></div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="section-header reveal">
+    <div class="section-num">08</div>
+    <div><div class="section-label">Get In Touch</div><div class="section-title">Contact</div></div>
+  </div>
+  <div class="contact-big reveal">OPEN TO<br><span class="outline">OPPORTUNITIES</span></div>
+  <div class="contact-links reveal">
+    <a href="mailto:hy9445531@gmail.com" class="contact-link-card"><div class="cl-label">Email</div><div class="cl-val" data-email-display="true">hy9445531@gmail.com</div></a>
+    <a href="tel:+918178121334" class="contact-link-card"><div class="cl-label">Phone</div><div class="cl-val">+91 8178121334</div></a>
+    <a href="https://www.linkedin.com/in/harsh-kumar-5a8b9b187" target="_blank" class="contact-link-card" rel="noopener noreferrer"><div class="cl-label">LinkedIn</div><div class="cl-val">harsh-kumar-5a8b9b187</div></a>
+    <a href="https://github.com/Harshk7771" target="_blank" class="contact-link-card" rel="noopener noreferrer"><div class="cl-label">GitHub</div><div class="cl-val">github.com/Harshk7771</div></a>
+    <a href="https://chakravyuhcyberops.notion.site/Harsh-Kumar-SOC-DFIR-Analyst-bebfd9803a324eb3b19aaac7767aab47" target="_blank" class="contact-link-card" rel="noopener noreferrer"><div class="cl-label">Notion Portfolio</div><div class="cl-val">View Full Profile →</div></a>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-copy">© 2026 Harsh Kumar · Delhi, India</span>
+  <span class="footer-copy">SOC · DFIR · Endpoint Security</span>
+</footer>
+
+<script nonce="AahUq54NW00f4gWBtHlEkg">
+const isTouchDevice = window.matchMedia('(hover:none)').matches || 'ontouchstart' in window;
+const cursor=document.getElementById('cursor'),follower=document.getElementById('follower');
+if(!isTouchDevice){
+  let mx=0,my=0,fx=0,fy=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.transform=`translate(${mx-5}px,${my-5}px)`;});
+  (function followCursor(){fx+=(mx-fx)*.1;fy+=(my-fy)*.1;follower.style.transform=`translate(${fx-18}px,${fy-18}px)`;requestAnimationFrame(followCursor);})();
+  document.querySelectorAll('a,button,.skill-tag').forEach(el=>{el.addEventListener('mouseenter',()=>{follower.style.width='60px';follower.style.height='60px';});el.addEventListener('mouseleave',()=>{follower.style.width='36px';follower.style.height='36px';});});
+} else {
+  cursor.style.display='none';
+  follower.style.display='none';
+}
+try{
+  const canvas=document.getElementById('bg-canvas');
+  const ctx=canvas.getContext('2d');
+  if(ctx){
+    let W,H;
+    function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+    resize();
+    window.addEventListener('resize',()=>{resize();drawGrid();});
+    function drawGrid(){
+      ctx.clearRect(0,0,W,H);
+      const gap=Math.min(60,Math.floor(W/10));
+      ctx.strokeStyle='rgba(200,241,53,0.04)';
+      ctx.lineWidth=1;
+      for(let x=0;x<=W;x+=gap){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
+      for(let y=0;y<=H;y+=gap){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
+      ctx.fillStyle='rgba(200,241,53,0.07)';
+      for(let x=0;x<=W;x+=gap)for(let y=0;y<=H;y+=gap){ctx.beginPath();ctx.arc(x,y,1,0,Math.PI*2);ctx.fill();}
+    }
+    drawGrid();
+  }
+}catch(e){document.getElementById('bg-canvas').style.display='none';}
+function toggleMenu(){
+  const nav=document.getElementById('mobile-nav');
+  const hb1=document.getElementById('hb1');
+  const hb2=document.getElementById('hb2');
+  const hb3=document.getElementById('hb3');
+  const open=nav.style.display==='flex';
+  nav.style.display=open?'none':'flex';
+  document.body.style.overflow=open?'':'hidden';
+  hb1.style.transform=open?'':'rotate(45deg) translate(4px,4px)';
+  hb2.style.opacity=open?'1':'0';
+  hb3.style.transform=open?'':'rotate(-45deg) translate(3px,-3px)';
+  hb3.style.width=open?'14px':'20px';
+}
+function toggleCerts(){
+  const el=document.getElementById('cert-extra');
+  const btn=document.getElementById('cert-toggle-btn');
+  const arrow=document.getElementById('cert-arrow');
+  const isOpen=el.style.display==='grid';
+  el.style.display=isOpen?'none':'grid';
+  arrow.style.transform=isOpen?'rotate(0deg)':'rotate(180deg)';
+  btn.querySelector('span').textContent=isOpen?'View all certifications (+ 6 more)':'Hide certifications';
+}
+const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*80);});},{threshold:isTouchDevice?.04:.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// ── EMAIL ANTI-HARVESTING ─────────────────────────────────────
+document.querySelectorAll('.mailto-link').forEach(function(el){
+  el.addEventListener('click', function(e){
+    e.preventDefault();
+    var u = this.getAttribute('data-mailto');
+    var d = this.getAttribute('data-domain');
+    window.location.href = 'mai'+'lto:'+u+'@'+d;
+  });
+});
+</script>
+</body>
+</html>
