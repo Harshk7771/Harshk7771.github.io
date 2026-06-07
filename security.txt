@@ -1,0 +1,13 @@
+# Security Policy — harshk7771.github.io
+# If you discover a security vulnerability, please report it responsibly.
+
+Contact: mailto:hy9445531@gmail.com
+Preferred-Languages: en, hi
+Scope: https://harshk7771.github.io
+Policy: https://harshk7771.github.io/#contact
+Acknowledgments: https://harshk7771.github.io
+Encryption: none
+Expires: 2027-06-01T00:00:00.000Z
+
+# Harsh Kumar — SOC Analyst | DFIR Analyst | Endpoint Security
+# NCIIPC Recognized Vulnerability Researcher
