@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Harsh Kumar">
+  <defs>
+    <linearGradient id="ig" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c8f135"/>
+      <stop offset="100%" stop-color="#6a8010"/>
+    </linearGradient>
+    <radialGradient id="ibg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#111"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </radialGradient>
+    <filter id="iglow">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="isglow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- BG -->
+  <rect width="512" height="512" fill="url(#ibg)" rx="80"/>
+  <!-- Card body -->
+  <rect x="56" y="40" width="400" height="432" rx="20"
+    fill="#0d0d0d" stroke="url(#ig)" stroke-width="5"
+    filter="url(#isglow)" opacity="0.97"/>
+  <!-- Top accent bar -->
+  <rect x="56" y="40" width="400" height="60" rx="20" fill="rgba(200,241,53,0.1)"/>
+  <rect x="56" y="80" width="400" height="20" fill="rgba(200,241,53,0.1)"/>
+  <!-- Card notch top centre -->
+  <rect x="196" y="32" width="120" height="18" rx="9"
+    fill="#0d0d0d" stroke="#c8f135" stroke-width="2" opacity="0.7"/>
+  <!-- Top label -->
+  <text x="256" y="72" text-anchor="middle"
+    font-family="'JetBrains Mono','Courier New',monospace"
+    font-size="20" letter-spacing="8" fill="#c8f135" opacity="0.65">SECURITY ANALYST</text>
+  <!-- Avatar circle -->
+  <circle cx="256" cy="230" r="110"
+    fill="rgba(200,241,53,0.05)" stroke="#c8f135" stroke-width="4"
+    filter="url(#iglow)"/>
+  <circle cx="256" cy="230" r="95"
+    fill="none" stroke="#c8f135" stroke-width="1" opacity="0.2"/>
+  <!-- HK -->
+  <text x="256" y="262" text-anchor="middle"
+    font-family="'Exo 2','Arial',sans-serif"
+    font-size="100" font-weight="800" letter-spacing="10"
+    fill="url(#ig)" filter="url(#iglow)">HK</text>
+  <!-- Name -->
+  <text x="256" y="350" text-anchor="middle"
+    font-family="'Exo 2','Arial',sans-serif"
+    font-size="38" font-weight="700" letter-spacing="8"
+    fill="#f0f0f0" opacity="0.9">HARSH KUMAR</text>
+  <!-- Role chip -->
+  <rect x="96" y="366" width="320" height="42" rx="6"
+    fill="rgba(200,241,53,0.08)" stroke="#c8f135" stroke-width="1.5" opacity="0.85"/>
+  <text x="256" y="393" text-anchor="middle"
+    font-family="'JetBrains Mono','Courier New',monospace"
+    font-size="18" letter-spacing="4"
+    fill="#c8f135" opacity="0.9">SOC · DFIR · ENDPOINT</text>
+  <!-- India tricolour -->
+  <rect x="56" y="438" width="133" height="34" rx="0"
+    fill="#FF9933" opacity="0.8"/>
+  <rect x="189" y="438" width="134" height="34"
+    fill="#f0f0f0" opacity="0.7"/>
+  <rect x="323" y="438" width="133" height="34" rx="0"
+    fill="#138808" opacity="0.8"/>
+  <!-- Ashoka chakra dot on white stripe -->
+  <circle cx="256" cy="455" r="8" fill="none" stroke="#000080" stroke-width="2" opacity="0.5"/>
+  <circle cx="256" cy="455" r="2" fill="#000080" opacity="0.5"/>
+  <!-- Bottom radius fix -->
+  <rect x="56" y="438" width="400" height="34" rx="20" fill="none"
+    stroke="url(#ig)" stroke-width="5" filter="url(#isglow)" opacity="0.97"
+    clip-path="inset(0 0 0 0)"/>
+</svg>

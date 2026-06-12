@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 56" width="320" height="56" role="img" aria-label="Harsh Kumar — SOC Analyst">
+  <defs>
+    <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c8f135"/>
+      <stop offset="100%" stop-color="#8ab020"/>
+    </linearGradient>
+    <linearGradient id="barg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c8f135" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#c8f135" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#c8f135" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="0.8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ID CARD EMBLEM (44x56 area) -->
+  <!-- Card body -->
+  <rect x="2" y="2" width="42" height="52" rx="3"
+    fill="#0a0a0a" stroke="url(#lg)" stroke-width="1.2"
+    filter="url(#softglow)" opacity="0.95"/>
+  <!-- Top accent bar -->
+  <rect x="2" y="2" width="42" height="8" rx="3" fill="rgba(200,241,53,0.1)"/>
+  <rect x="2" y="7" width="42" height="3" fill="rgba(200,241,53,0.1)"/>
+  <!-- Top label -->
+  <text x="23" y="8.5" text-anchor="middle"
+    font-family="'JetBrains Mono','Courier New',monospace"
+    font-size="3.2" letter-spacing="1.5" fill="#c8f135" opacity="0.6">SECURITY</text>
+  <!-- Avatar circle -->
+  <circle cx="23" cy="28" r="11"
+    fill="rgba(200,241,53,0.06)" stroke="#c8f135" stroke-width="0.8"
+    filter="url(#softglow)"/>
+  <!-- HK in circle -->
+  <text x="23" y="31.5" text-anchor="middle"
+    font-family="'Exo 2','Arial',sans-serif"
+    font-size="10" font-weight="800" letter-spacing="1"
+    fill="url(#lg)" filter="url(#softglow)">HK</text>
+  <!-- Name row -->
+  <text x="23" y="44.5" text-anchor="middle"
+    font-family="'Exo 2','Arial',sans-serif"
+    font-size="4.5" font-weight="700" letter-spacing="1"
+    fill="#f0f0f0">HARSH KUMAR</text>
+  <!-- Role chip -->
+  <rect x="6" y="46" width="34" height="5.5" rx="1"
+    fill="rgba(200,241,53,0.08)" stroke="#c8f135" stroke-width="0.4" opacity="0.9"/>
+  <text x="23" y="50.2" text-anchor="middle"
+    font-family="'JetBrains Mono','Courier New',monospace"
+    font-size="2.8" letter-spacing="0.8" fill="#c8f135" opacity="0.85">SOC · DFIR · ANALYST</text>
+  <!-- India tricolour bottom -->
+  <rect x="2" y="51.5" width="14" height="2.5" rx="0.5" fill="#FF9933" opacity="0.7"/>
+  <rect x="16" y="51.5" width="14" height="2.5" fill="#f0f0f0" opacity="0.6"/>
+  <rect x="30" y="51.5" width="14" height="2.5" rx="0.5" fill="#138808" opacity="0.7"/>
+
+  <!-- WORDMARK -->
+  <!-- Name large -->
+  <text x="56" y="22"
+    font-family="'Exo 2','Arial',sans-serif"
+    font-size="18" font-weight="800" letter-spacing="3"
+    fill="#f0f0f0" filter="url(#softglow)">HARSH KUMAR</text>
+  <!-- Underline bar -->
+  <rect x="56" y="26" width="180" height="1" fill="url(#barg)" rx="0.5"/>
+  <!-- Role line -->
+  <text x="56" y="37"
+    font-family="'JetBrains Mono','Courier New',monospace"
+    font-size="5.5" letter-spacing="2"
+    fill="#c8f135" opacity="0.7">SOC · DFIR · ENDPOINT SECURITY</text>
+  <!-- Bottom line -->
+  <text x="56" y="49"
+    font-family="'JetBrains Mono','Courier New',monospace"
+    font-size="4.5" letter-spacing="2"
+    fill="#666" opacity="0.8">NCIIPC RESEARCHER · DELHI, INDIA</text>
+</svg>
